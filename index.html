@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- 
+Tutorial: https://www.youtube.com/watch?v=zxxB9SFh9p4
+-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namora comigo?</title>
+</head>
+
+<body>
+    <div id="conteudo">
+        <h2>Aceita namorar comigo?</h2>
+        <div style="margin: auto;width: 170px;">
+        <button style="position: fixed;display: block;" class="btn" onclick="sim()">SIM</button>
+        <button class="btn" onclick="desvia(this)" onmouseover="desvia(this)" style="position: absolute;">NÃO</button>
+    </div>
+        <img src="C:\Users\GABRIEL LIMA\Desktop\curriculo gabriel\Snapchat-662480832.jpg">" 
+        </div>
+    </div>
+</body>
+<style>
+        #conteudo {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 15px 32px;
+        border-radius: 5px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #a04545;
+    }
+
+    .no-btn {
+        background-color: #f00;
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .no-btn:hover {
+        background-color: #cc0000;
+    }
+
+</style>
+
+<script>
+function sim() {
+        alert("Você aceitou namorar comigo! :)");
+        // redireciona para um URL após clicar no SIM
+        location.href = "https://music.youtube.com/watch?v=izGwDsrQ1eQ";
+    }
+
+    function desvia(btn) {
+        // btn declarado na função
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+</html>

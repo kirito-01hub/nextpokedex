@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>Interactive Menu</title>
+</head>
+<body>
+  <div id="menu">
+    <input type="checkbox" id="check">
+    <i class="fas fa-bars checkbtn"></i>
+    <label class="logo"><i class="fas fa-user"></i> Your Logo</label>
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#settings">Settings</a></li>
+      <li><a href="#profile">Your Profile</a></li>
+      <li><a href="#changePassword">Change Password</a></li>
+      <li><a href="#notifications">Notifications</a></li>
+    </ul>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $(".checkbtn").click(function () {
+        $(".checkbtn").toggleClass("change");
+      });
+    });
+  </script>
+</body>
+</html>
